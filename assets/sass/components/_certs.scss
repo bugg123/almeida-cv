@@ -1,4 +1,4 @@
-.skills {
+.certs {
     &__group {
         & span {
             font-weight: 700;
@@ -9,26 +9,27 @@
             }
 
             &:hover ~ li {
-                background-color: $color-background;
+                background-color: $color-primary;
                 color: $color-white;
             }
 
         }
 
         & li{
-            display: inline-block;
+            display: inline;
+            float: center;
             font-weight: 400;
             transition: all 0.2s ease-in-out;
+            margin: 0 10px 0 0;
             padding: 0 1px;
-            border-radius: 2px;
-
-            &:not(:last-child)::after{
-                content: ", "
-            }
+            border-radius: 10px;
 
             &:hover {
                 background-color: $color-background;
                 color: $color-white;
+            }
+            & a{
+                color: $color-primary;
             }
         }
     }

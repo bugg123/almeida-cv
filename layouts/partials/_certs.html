@@ -1,0 +1,18 @@
+{{ if .Site.Data.content.Certs }}
+<div class="sideSection">
+    <div class="sideSection__heading">
+        <h2 class="sideSection__title">{{ i18n "certs" }}</h2>
+    </div>
+    <div class="sideSection__content">
+        <ul class="certs">
+            <li>
+                {{ range .Site.Data.content.Certs }}
+                <ul class="certs__group">
+                    <li>{{ printf "[%s](%s)" .Name .Link | markdownify }}</li>
+                </ul>
+                {{ end }}
+            </li>
+        </ul>
+    </div>
+</div>
+{{ end }}
